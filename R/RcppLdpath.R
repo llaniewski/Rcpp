@@ -21,13 +21,13 @@ Rcpp.system.file <- function(...){
 }
 
 ## quote path if non-standard characters are used
-Rcpp.quoteNonStandard = function(path, quoteAll = .Platform$OS.type!="unix") {
-    quoted = shQuote(path)
+Rcpp.quoteNonStandard <- function(path, quoteAll = .Platform$OS.type!="unix") {
+    quoted <- shQuote(path)
     if (quoteAll) {
         quoted
     } else {
         # Select paths in which all characters do not need quoting
-        sel = grepl("^[[:alnum:]/._~+@%-]*$", path)
+        sel <- grepl("^[[:alnum:]/._~+@%-]*$", path)
         # Quote remaining paths
         ifelse(sel, path, quoted)
     }
