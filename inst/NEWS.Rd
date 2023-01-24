@@ -21,6 +21,8 @@
       \code{snprintf} (Dirk and Kevin in \ghpr{1236} and \ghpr{1237}).
       \item Several conversion warnings found by \code{clang++} have been
       addressed (Dirk in \ghpr{1240} and \ghpr{1241}).
+      \item \code{Rcpp:::CxxFlags()} now quotes only non-standard include path
+       on linux (closing \ghit{1242}).
     }
     \item Changes in Rcpp Attributes:
     \itemize{
